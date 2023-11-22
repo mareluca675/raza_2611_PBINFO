@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+long long a, b, rest, s = 0, cmmmc;
+
+int main()
+{
+    cin >> a >> b;
+    
+    int copiea = a;
+    int copieb = b;
+    
+    cmmmc = a * b;
+    
+    while(b != 0)
+    {
+        rest = a % b;
+        a = b;
+        b = rest;
+    }
+    
+    cmmmc = cmmmc / a;
+    
+    cout << cmmmc / copiea - 1 + cmmmc / copieb - 1;
+}
